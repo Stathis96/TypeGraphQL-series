@@ -5,8 +5,7 @@ Following and coding along Ben Awad : Youtube Playlist Series : https://www.yout
 
 1. Clone and install dependecies
 ```
-git clone https://github.com/benawad/type-graphql-series.git
-cd type-graphql-series
+git clone 
 yarn
 ```
 2. Make sure you have PostgreSQL running on your computer with a database called `typegraphql-example` and a user who has access to that database with the username `postgres` and password `postgres`
