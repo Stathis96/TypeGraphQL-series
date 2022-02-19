@@ -24,4 +24,15 @@ export class AuthorBookResolver {
     return true;
   }
 
+  @Mutation(() => Boolean)
+  async deleteBook(@Arg("bookId", () => Int) bookId: number) {
+    // await AuthorBook.delete({ bookId });
+    await Book.delete({ id: bookId });
+    return true;
+  }
+
+  @Query(() => [Book])
+  async books() {
+    return Book.find();
+  }
 }
