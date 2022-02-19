@@ -22,4 +22,14 @@ export class AuthorDataMapper {
     return this.authorRepo.save({ name });
   }
 
+  @Mutation(() => Boolean)
+  async deleteBook2(@Arg("bookId", () => Int) bookId: number) {
+    await this.bookRepo.delete({ id: bookId });
+    return true;
+  }
+
+  @Query(() => [Book])
+  async books2() {
+    return this.bookRepo.find();
+  }
 }
