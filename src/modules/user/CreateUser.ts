@@ -31,4 +31,21 @@ function createResolver<T extends ClassType, X extends ClassType>(
   return BaseResolver;
 }
 
+@InputType()
+class ProductInput {
+  @Field()
+  name: string;
+}
 
+export const CreateUserResolver = createResolver(
+  "User",
+  User,
+  RegisterInput,
+  User
+);
+export const CreateProductResolver = createResolver(
+  "Product",
+  Product,
+  ProductInput,
+  Product
+);
